@@ -1,0 +1,17 @@
+name: Sync Changes
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Sync changes
+        run: |
+          echo "Changes have been pushed to the repository"
